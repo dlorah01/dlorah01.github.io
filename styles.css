@@ -1,0 +1,783 @@
+/*
+Custom Fonts
+*/
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("fonts/Proxima-Nova.ttf");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("fonts/Proxima-Nova-Bold.otf");
+  font-weight: bold;
+}
+
+/*
+Basic Styling
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  overflow-x: hidden;
+  background: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+Header Styling
+*/
+
+nav {
+  display: flex;
+  background-color: white;
+  justify-content: space-around;
+  padding: 20px 0;
+  color: rgb(255, 254, 254);
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+/*
+First Article - Banner Styling
+*/
+
+section.banner {
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: stretch;
+  flex-direction: row;
+  align-content: center;
+  background-color: black;
+}
+
+.banner .content {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  background-color: black;
+}
+
+.text-banner-card {
+  flex-basis: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-text h1 {
+  padding-top: 20px;
+  padding-left: 150px;
+  color: #2196F3;
+  font-weight: bold;
+}
+
+.content-text h2 {
+  padding-left: 150px;
+  font-weight: normal;
+  margin: 20px 0;
+  color: white;
+}
+
+.content-text p {
+  padding-left: 150px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.device-image-card {
+  position: relative;
+  flex-basis: 22.5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+}
+
+.device-image-card img {
+  width: 100%;
+}
+
+.user-device-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: 22.5%;
+  background-color: black
+}
+
+.user-device-card img {
+  width: 100%;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding-left: 150px;
+  padding-bottom: 20px;
+}
+
+.buttons-container .button-banner {
+  background-color: #00A7FF;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: left;
+  text-decoration: none;
+  font-family: 'Proxima Nova';
+  font-size: 14px;
+  cursor: pointer;
+  max-width: 70%;
+  margin-right: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-banner img {
+  width: 14px;
+  margin: 0 15px;
+}
+
+/*
+Second Article - Form Styling
+*/
+
+section.form {
+  position: relative;
+  padding: 100px 25px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background: rgb(228, 228, 228);
+  background: linear-gradient(180deg, rgb(211, 211, 211) 0%, rgba(255, 255, 255, 1) 20%);
+}
+
+.form .content {
+  align-self: center;
+  width: 80%;
+  position: relative;
+  display: flex;
+  align-content: center;
+  color: black;
+  margin-top: 40px;
+}
+
+.text-form-card {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.text-form-card h1 {
+  width: 80%;
+}
+
+.text-form-card h2 {
+  width: 80%;
+  font-weight: normal;
+  margin: 20px 0;
+}
+
+.text-form-card p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.text-form-card img {
+  width: inherit;
+}
+
+.form-input-card {
+  width: 50%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input-card input[type=text], input[type=tel], input[type=email], select {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Proxima Nova';
+  width: 100%;
+  font-size: 14px;
+  padding: 12px 20px;
+  margin-bottom: 16px;
+  border: 2px solid #d6d6d6;
+  box-sizing: border-box;
+}
+
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-size: 12px;
+  user-select: none;
+}
+
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #d6d6d6;
+  background-color: #eee;
+}
+
+.container-checkbox:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+.container-checkbox input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-checkbox input:checked~.checkmark:after {
+  display: block;
+}
+
+.container-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.form-input-card input[type=submit] {
+  display: block;
+  background-color: #00A7FF;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: left;
+  text-decoration: none;
+  font-family: 'Proxima Nova';
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.form-input-card img {
+  display: none;
+  width: inherit;
+}
+
+.card-content .button-discover {
+  background-color: #00A7FF;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: left;
+  text-decoration: none;
+  font-family: 'Proxima Nova';
+  font-size: 12px;
+  cursor: pointer;
+  max-width: 70%;
+}
+
+.arrow-down-point {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 40px solid #F2F2F2;
+  border-radius: 20px 20px 0 0;
+}
+
+.arrow-down-point-counterpart {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 0;
+  height: 0;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+  border-top: 35px solid white;
+}
+
+/*
+Third Article - Capabilities Styling
+*/
+
+section.capabilities {
+  position: relative;
+  padding: 100px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow-down {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 50px solid white;
+}
+
+.capabilities h1 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.capabilities .content {
+  align-self: center;
+  width: 80%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  color: black;
+  font-size: 11px;
+  margin-top: 40px;
+}
+
+.card-capability {
+  align-self: stretch;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h2 {
+  font-weight: bold;
+  width: 75%;
+}
+
+.card-content p {
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.card-content .button-discover {
+  background-color: #00A7FF;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: left;
+  text-decoration: none;
+  font-family: 'Proxima Nova';
+  font-size: 14px;
+  cursor: pointer;
+  max-width: 70%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+Footer Styling
+*/
+
+footer {
+  position: relative;
+  padding: 150px 0 50px 0;
+}
+
+footer:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  clip-path: polygon(0% 0%, 100% 100px, 100% 100%, 0% 100%);
+}
+
+footer .content {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F2F2F2;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.menu-wrapper {
+  width: 30%;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+.social-wrapper {
+  width: 20%;
+  background-color: transparent;
+  margin-bottom: 30px;
+}
+
+.menu, .social-menu {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: flex;
+  flex: 1 1 0px;
+  list-style-type: none;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 1px solid white;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.menu li:last-child {
+  border-right: none;
+}
+
+.social-menu li {
+  display: flex;
+  flex: 1 1 0px;
+  list-style-type: none;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.social-menu li a {
+  text-decoration: none;
+  color: white;
+  margin: 0 auto;
+}
+
+.copyright-wrapper {
+  width: 60%;
+  background-color: transparent;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.break {
+  flex-basis: 0%;
+}
+
+/*
+Mobile Styling
+*/
+
+@media only screen and (max-width: 768px) {
+  /*
+  Header Styling
+  */
+  nav ul {
+    width: 50%;
+  }
+  /*
+  First Article - Banner Styling
+  */
+  .break {
+    flex-basis: 100%;
+    height: 0;
+    display: initial;
+  }
+  .text-banner-card {
+    flex-basis: 100%;
+    order: 1;
+    padding: 70px 25px;
+  }
+  .content-text h1 {
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+  .content-text h2 {
+    padding-left: 0px;
+  }
+  .content-text p {
+    padding-left: 0px;
+  }
+  .device-image-card {
+    flex-basis: 50%;
+  }
+  .user-device-card {
+    flex-basis: 50%;
+  }
+  .buttons-container {
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
+  .buttons-container .button-banner#download {
+    display: none;
+  }
+  /*
+  Second Article - Form Styling
+  */
+  section.form {
+    padding: 70px 25px;
+    background-color: white;
+  }
+  .form .content {
+    width: 85%;
+    flex-direction: column;
+    margin: 0;
+  }
+  .text-form-card {
+    align-self: center;
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  .text-form-card h1 {
+    width: 100%;
+  }
+  .text-form-card h2 {
+    width: 100%;
+  }
+  .text-form-card img {
+    display: none;
+  }
+  .form-input-card {
+    align-self: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .form-input-card img {
+    display: initial;
+    margin-top: 40px;
+    width: 80%;
+    align-self: center;
+  }
+  /*
+  Third Article - Capabilities Styling
+  */
+  section.capabilities {
+    padding: 70px 25px;
+  }
+  .capabilities .content {
+    width: 85%;
+    flex-direction: column;
+  }
+  .card-capability {
+    align-self: center;
+    width: 80%;
+    margin: 20px 0;
+  }
+  .capabilities .card-capability:first-child {
+    margin-top: 0px;
+  }
+  .capabilities .card-capability:last-child {
+    margin-bottom: 0px;
+  }
+  .card-content .button-discover {
+    width: 60%
+  }
+  /*
+  Footer Styling
+  */
+  .menu-wrapper {
+    width: 60%;
+    background-color: transparent;
+  }
+  .copyright-wrapper {
+    width: 75%;
+  }
+  .social-wrapper {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  /*
+  Header Styling
+  */
+  nav ul {
+    width: 40%;
+  }
+  /*
+  First Article - Banner Styling
+  */
+  .break {
+    flex-basis: 100%;
+    height: 0;
+    display: block;
+  }
+  .text-banner-card {
+    flex-basis: 100%;
+    order: 1;
+    padding: 40px 40px;
+  }
+  .content-text h1 {
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+  .content-text h2 {
+    padding-left: 0px;
+  }
+  .device-image-card {
+    flex-basis: 50%;
+  }
+  .user-device-card {
+    flex-basis: 50%;
+  }
+  .buttons-container {
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
+  /*
+  Second Article - Form Styling
+  */
+  section.form {
+    padding: 70px 25px;
+    background-color: white;
+  }
+  .form .content {
+    width: 85%;
+    flex-direction: column;
+    margin: 0;
+  }
+  .text-form-card {
+    align-self: center;
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  .text-form-card h1 {
+    width: 100%;
+  }
+  .text-form-card h2 {
+    width: 100%;
+  }
+  .text-form-card img {
+    display: none;
+  }
+  .form-input-card {
+    align-self: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .form-input-card img {
+    display: initial;
+    margin-top: 40px;
+    width: 80%;
+    align-self: center;
+  }
+  /*
+  Third Article - Capabilities Styling
+  */
+  .capabilities .content {
+    width: 90%;
+    flex-direction: column;
+  }
+  .card-capability {
+    align-self: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .capabilities .card-capability:first-child {
+    margin-top: 0px;
+  }
+  .capabilities .card-capability:last-child {
+    margin-bottom: 0px;
+  }
+  .card-content .button-discover {
+    width: 60%
+  }
+  /*
+  Footer Styling
+  */
+  .menu-wrapper {
+    width: 80%;
+    background-color: transparent;
+  }
+  .copyright-wrapper {
+    width: 90%;
+  }
+  .social-wrapper {
+    width: 50%;
+    background-color: transparent;
+    margin-bottom: 30px;
+  }
+}
+
+/* main {
+  height: 100vh;
+} */
